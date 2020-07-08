@@ -1,3 +1,7 @@
+# Unreleased
+## Changed:
+ - `Point::generate` function now accepts a `impl FnMut`. Custom implementations of `Point` must change to accept `impl FnMut` instead of `impl Fn`.
+   Callers of `Point::generate` should not require changes.
 # 0.8.1
 ## Changed:
  - Fine tuned nearest neighbor iterator inline capacity (see  #39). This should boost performance in some cases.
